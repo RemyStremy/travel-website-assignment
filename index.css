@@ -1,0 +1,14 @@
+#hero-image {
+    background-image: url("images/hero/waterfall.jpg");
+
+    width: 100%;
+    /* Fills 100% of the vertical height */
+    height: 100vh;
+
+    /* Image positioning */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}

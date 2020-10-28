@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2E8075;
+    position: fixed;
+    width: 100%;
+    min-height: 40px;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    padding: 0px 15%;
+}
+
+nav li {
+    display: inline-block;
+}
+nav li a {
+    display: flex;
+    padding: 20px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: rgba(255,255,255,.1);
+} 
+
+nav li a.active {
+    background-color: rgba(0,0,0,.1);
+}
+
+/* Pushes 2nd link onwards to the right */
+nav li:nth-child(2) {
+    margin-left: auto;
+}
