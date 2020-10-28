@@ -1,5 +1,5 @@
 #hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("images/hero/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero/hero.jpg");
     width: 100%;
     /* Fills 100% of the vertical height */
     height: 100vh;
@@ -13,7 +13,7 @@
 
 /* Hero Text */
 .hero-text {
-    top: 35%;
+    top: 45%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -28,30 +28,42 @@
     font-weight: 400;
 }
 
-.hero-text p {
-    font-size: 20px;
-    margin-top: 50px;
+.dividing-line {
+    position: absolute;
+    left: calc(50% - 195px);
+    margin-top: 7px;
+    height: 1px;
+    width: 390px;
+    background-color: #f1b24a;
 }
 
-/* Experience Card */
-.experience-card {
+.hero-text p {
+    font-size: 20px;
+    padding: 50px 0;
+}
+
+/* Call-to-Action Buttons */
+.call-to-action {
     top: 60%;
     /* Calculate card width so the box is central */
-    left: calc(50% - 103.14px); 
+    left: calc(50% - 235px); 
     padding: 32px 16px;
     position: absolute;
     text-align: center;
-    background-color: rgba(0, 0, 0, .5)
 }
 
-.experience-card h2 {
-    margin-bottom: 20px;
+.call-to-action a {
+    margin: 10px 30px;
+    padding: 12px 15px;
+    display: inline-block;
+    border: 1px solid #9dc88d;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     font-size: 20px;
-    color: lightgray;
+    color: white;
+    text-decoration: none;
 }
 
-.experience-card a {
-    margin-top: 10px;
-    display: block;
-    border: 2px solid #;
+.call-to-action a:hover {
+    background-color: rgba(77, 119, 78, 0.3);
 }
