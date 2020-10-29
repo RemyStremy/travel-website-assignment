@@ -13,57 +13,67 @@
 
 /* Hero Text */
 .hero-text {
-    top: 45%;
+    top: 40%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     text-align: center;
-    letter-spacing: 3px;
-    color: white;
+    color: #EDF5E1;
 
 }
 
 .hero-text h1 {
     font-size: 70px;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
 
-.dividing-line {
+#green-header {
+    color: #8EE4AF;    
+}
+
+/* .dividing-line {
     position: absolute;
     left: calc(50% - 195px);
-    margin-top: 7px;
     height: 1px;
     width: 390px;
     background-color: #f1b24a;
-}
+} */
 
-.hero-text p {
+.hero-text h2 {
     font-size: 20px;
-    padding: 50px 0;
+    font-weight: 300;
+    padding: 20px 0;
+    letter-spacing: 2px;
 }
 
 /* Call-to-Action Buttons */
 .call-to-action {
-    top: 60%;
+    top: 50%;
     /* Calculate card width so the box is central */
-    left: calc(50% - 235px); 
+    left: calc(50% - 320.5px); 
     padding: 32px 16px;
     position: absolute;
     text-align: center;
 }
 
+.call-to-action img {
+    height: 22px;
+    width: 22px;
+    padding-right: 15px;
+}
+
 .call-to-action a {
-    margin: 10px 30px;
-    padding: 12px 15px;
+    margin: 10px 20px;
+    padding: 20px 40px;
     display: inline-block;
-    border: 1px solid #9dc88d;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    color: white;
+    border-radius: 40px;
+    background-color: #379683;
+    font-size: 22px;
+    color: #EDF5E1;
     text-decoration: none;
 }
 
 .call-to-action a:hover {
-    background-color: rgba(77, 119, 78, 0.3);
+    background-color: #8EE4AF;
 }
