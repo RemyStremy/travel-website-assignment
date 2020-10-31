@@ -8,10 +8,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+main {
+    min-height: calc(100vh - 132px);
+}
+
+/* -- NAVIGATION -- */
+
 /* Navigation Bar */
 nav {
     top: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     min-height: 40px;
     z-index: 1000; /* Puts the header in front of the hero image */
@@ -46,6 +52,7 @@ nav li a.active {
     color: #EDF5E1;
 }
 
+/* Puts lines between the nav headings */
 .nav-divider {
     height: 30px;
     width: 1px;
@@ -53,29 +60,544 @@ nav li a.active {
     display: inline-block;
 }
 
+/* Hide first divider bar when not in iPhone resolution */
+.nav-divider:nth-child(2) {
+    display: none;
+}
+
 #nav-home {
     color: #EDF5E1;
     font-weight: 600;
 }
 
+/* Makes 'Home' bolder */
 nav li:nth-child(1) {
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 /* Pushes all nav links besides home to the right */
-nav li:nth-child(2) {
+nav li:nth-child(3) {
     margin-left: auto;
 }
 
+/* Putting breadcrumbs in the centre */
+.breadcrumb {
+    padding-left: 16%;
+}
+
+/* Making links side-by-side */
+.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    color: #8EE4AF;
+}
+
+/* Putting '>' between the links */
+.breadcrumb li+li:before {
+    color: #EDF5E1;
+    content: " \003E  ";
+}
+
+/* Adding color to the links */
+.breadcrumb li a {
+    color: #EDF5E1;
+    text-decoration: none;
+}
+
+/* ---------------- */
+
+/* -- INDEX PAGE -- */
+#hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hero-images/hero.jpg");
+    width: 100%;
+    /* Fills 100% of the vertical height */
+    min-height: 100vh;
+
+    /* Image positioning */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Hero Text */
+.hero-text {
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #EDF5E1;
+
+}
+
+.hero-text h1 {
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+#green-header {
+    color: #8EE4AF;    
+}
+
+.hero-text h2 {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+
+/* Call-to-Action Buttons */
+.call-to-action {
+    top: 50%;
+    /* Calculate card width so the box is central */
+    left: calc(50% - 320.5px); 
+    padding: 32px 16px;
+    position: absolute;
+    text-align: center;
+}
+
+.call-to-action img {
+    height: 22px;
+    width: 22px;
+    padding-right: 15px;
+}
+
+.call-to-action a {
+    margin: 10px 20px;
+    padding: 20px 40px;
+    width: fit-content;
+    display: inline-block;
+    border-radius: 40px;
+    background-color: #379683;
+    font-size: 22px;
+    color: #EDF5E1;
+    text-decoration: none;
+    align-items: center; /* aligns items vertically */
+}
+
+.call-to-action a:hover {
+    background-color: #44b9a2;
+}
+
+/* ---------------- */
+
+/* -- CATEGORY PAGES */
+
+#cafe-page {
+    background-color: #EDF5E1;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/hero-images/cafe.png");
+    min-height: 100vh;
+}
+
+#heritage-page {
+    background-color: #EDF5E1;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/hero-images/floral.jpg");
+    min-height: 100vh;
+}
+
+#heading h1 {
+    text-align: center;
+    padding: 30px 0;
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: #EDF5E1;
+    font-weight: 500;
+}
+
+#category-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30%;
+    grid-gap: 40px;
+}
+
+.category-card {
+    background-color: #EDF5E1;
+    padding: 20px 20px 20px;
+    border-radius: 40px;
+}
+
+/* Images in the cards */
+.category-card figure {
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.category-card figure img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Text in the cards */
+
+.category-card h1 {
+    margin-top: 10px;
+    color: #144A3F;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.category-card p {
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* Call-to-action buttons */
+
+.category-card>a {
+    display: block;
+    width: fit-content;
+    padding: 15px 25px;
+    margin: auto;
+    border-radius: 40px;
+    text-decoration: none;
+    background-color: #379683;
+    color: #EDF5E1;
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-card>a:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------------- */
+
+/* -- DESTINATION PAGES -- */
+
+#destination-container {
+    display: flex;
+    justify-content: center;
+}
+
+#destination-card {
+    width: 40vw;
+    background-color: #EDF5E1;
+    padding: 20px 20px 20px;
+    border-radius: 40px;
+}
+
+/* Images in the cards */
+figure {
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#destination-card figure img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover; /* crops image */
+    object-position: 50% 40%; /* crop width and height */
+    width: 100%;
+    border-radius: 40px;
+}
+
+#destination-card h3 {
+    text-align: center;
+    color: #144A3F;
+}
+
+#destination-card p {
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Call-to-action buttons */
+
+#destination-card #buttons {
+    display: block;
+    text-align: center;
+}
+
+#destination-card #buttons>a {
+    display: inline-block;
+    width: fit-content;
+    padding: 18px;
+    margin: 0 6px;
+    border-radius: 40px;
+    text-decoration: none;
+    background-color: #379683;
+    color: #EDF5E1;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+#destination-card #buttons>a:hover {
+    transform: scale(1.05);
+}
+
+#destination-card a img {
+    height: 15px;
+    width: 15px;
+    padding-left: 15px;
+}
+
+/* ----------------------- */
+
+/* -- ABOUT -- */
+
+#about-page {
+    background-color: #EDF5E1;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9));
+    min-height: 100vh;
+}
+
+#about-container {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: fitcontent fitcontent fitcontent;
+    grid-gap: 40px;
+}
+
+/* Contact Fields */
+
+.contact-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 1px;
+}
+
+.contact-container form {
+    text-align: center;
+}
+
+.contact-container form #form-fields {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.contact-container form label {
+    font-weight: 600;
+}
+/* Text Boxes */
+input[type=text],
+select,
+textarea {
+    width: 300px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    resize: vertical;
+    letter-spacing: 1px;
+}
+
+
+/* Submit Button */
+input[type=submit] {
+    border: none;
+    width: fit-content;
+    padding: 15px 25px;
+    border-radius: 40px;
+    background-color: #379683;
+    color: #EDF5E1;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.about-card {
+    display: inline-block;
+    width: 40vw;
+    background-color: #EDF5E1;
+    padding: 20px 20px 20px;
+    border-radius: 40px;
+}
+
+.about-card h2,h3 {
+    text-align: center;
+    color: #144A3F;
+}
+
+.about-card p {
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.about-card ul {
+    list-style-type: none;
+}
+.about-card ul li {
+    padding: 0 30px 20px;
+    text-align: center;
+    word-wrap: break-word; /* allows long url to be broken onto next line */
+}
+
+.about-card:last-child {
+    padding-bottom: 30px;
+}
+
+/* ----------- */
+
+/* -- FOOTER -- */
+
 footer {
-    position: fixed;
+    position: relative;
     display: inline-block;
     text-align: center;
     bottom: 0; /* 0px from the bottom */
     z-index: 1000; /* Puts the footer in front of the hero image */
-    width: 100%;
-    padding: 20px 30px;
+    width: 100vw;
+    padding: 20px 0;
     background-color: rgba(0,0,0,.5);
     color: rgba(255,255,255,.5);
 }
+
+/* ------------ */
+
+/* -- IPAD MEDIA QUERIES -- */
+@media only screen and (max-width: 800px) {
+    /* Index Page */
+    .hero-text {
+        width: 80vw;
+    }
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    /* Category Pages */
+    #category-container {
+        grid-template-columns: 1fr;
+        padding: 0 10vw;
+    }
+
+    .category-card:last-child {
+        margin-bottom: 30px;
+    }
+
+    /* Destination Page */
+    #heading h1 {
+        font-size: 40px;
+    }
+
+    #destination-card {
+        width: 60vw;
+    }
+
+    /* About Page */
+    .about-card {
+        width: 60vw;
+    }
+}
+/* ------------------------ */
+
+/* -- PHONE MEDIA QUERIES -- */
+@media only screen and (max-width: 500px) {
+
+    main {
+        min-height: calc(100vh - 82px - 65px)
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav li a {
+        font-size: 14px;
+    }
+    
+    .nav-divider:nth-child(2) {
+        display: inline-block;
+    }
+
+    /* Index Page */
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 11px;
+    }
+
+    .call-to-action {
+        left: calc(50% - 132.55px);
+    }
+
+    .call-to-action a {
+        font-size: 15px;
+        padding: 20px 30px;
+        display: block;
+    }
+
+    .call-to-action a:last-of-type {
+        margin: auto;
+    }
+
+    .call-to-action a img {
+        height: 15px;
+        width: 15px;
+    }
+
+    /* Destination Page */
+    #heading h1 {
+        font-size: 35px;
+    }
+
+    #destination-card {
+        width: 80vw;
+    }
+
+    #destination-card:last-child {
+        margin-bottom: 30px;
+    }
+
+    #destination-card h3 {
+        font-size: 18px;
+    }
+
+    #destination-card p {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    #buttons a:last-of-type {
+        margin-top: 10px !important;
+    }
+
+    /* About Page */
+    .about-card {
+        width: 80vw;
+    }
+
+    .about-card:last-child {
+        margin-bottom: 30px;
+    }
+
+    .about-card p {
+        padding: 20px 0;
+    }
+
+    #form-fields {
+        grid-template-columns: 1fr !important;
+    }
+
+    input[type=text], select, textarea {
+        width: unset;
+    }
+}
+/* ------------------------ */
