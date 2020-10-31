@@ -71,6 +71,7 @@ nav li:nth-child(2) {
 footer {
     position: fixed;
     display: inline-block;
+    text-align: center;
     bottom: 0; /* 0px from the bottom */
     z-index: 1000; /* Puts the footer in front of the hero image */
     width: 100%;

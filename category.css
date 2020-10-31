@@ -2,16 +2,46 @@
     box-sizing: border-box;
 }
 
-body {
+#heritage-page {
     background-color: #EDF5E1;
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/category/vine.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/category/floral.jpg");
+    min-height: calc(100vh - 96px);
+}
+
+#cafe-page {
+    background-color: #EDF5E1;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/category/cafe.png");
     min-height: calc(100vh - 96px);
 }
 
 main {
-    margin-top: calc(66px + 30px);  
-    margin-bottom: calc(69px + 30px);
+    margin-top: 10vh;  
+    margin-bottom: 10vh;
     padding: 0 10px;
+}
+
+/* Putting breadcrumbs in the centre */
+.breadcrumb {
+    padding-left: 16%;
+}
+
+/* Making links side-by-side */
+.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    color: #8EE4AF;
+}
+
+/* Putting '>' between the links */
+.breadcrumb li+li:before {
+    color: #EDF5E1;
+    content: " \003E  ";
+}
+
+/* Adding color to the links */
+.breadcrumb li a {
+    color: #EDF5E1;
+    text-decoration: none;
 }
 
 #heading h1 {
@@ -55,7 +85,7 @@ main {
 
 .card h1 {
     margin-top: 10px;
-    color: #05386B;
+    color: #144A3F;
     letter-spacing: 2px;
     text-align: center;
     font-size: 20px;
@@ -75,11 +105,11 @@ main {
     width: 8em;
     padding: 10px 15px;
     margin: auto;
-    border: 2px solid #05386B;
+    border: 2px solid #144A3F;
     border-radius: 40px;
     text-decoration: none;
     background-color: white;
-    color: #05386B;
+    color: #144A3F;
     font-weight: bold;
     letter-spacing: 1px;
     text-align: center;
