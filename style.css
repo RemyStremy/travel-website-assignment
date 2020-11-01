@@ -448,8 +448,9 @@ input[type=submit] {
     word-wrap: break-word; /* allows long url to be broken onto next line */
 }
 
+/* This makes it so there is a gap between the footer and the last about card */
 .about-card:last-child {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 /* ----------- */
@@ -584,10 +585,6 @@ footer {
         width: 80vw;
     }
 
-    .about-card:last-child {
-        margin-bottom: 30px;
-    }
-
     .about-card p {
         padding: 20px 0;
     }
@@ -596,6 +593,7 @@ footer {
         grid-template-columns: 1fr !important;
     }
 
+    /* Make the contact fields fit into the card */
     input[type=text], select, textarea {
         width: unset;
     }
