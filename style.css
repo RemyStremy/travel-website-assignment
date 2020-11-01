@@ -317,6 +317,13 @@ figure {
     text-align: center;
 }
 
+/* Wheelchair Symbol */
+#destination-card p img {
+    height: 17px;
+    width: 17px;
+    align-items: center;
+}
+
 /* Call-to-action buttons */
 
 #destination-card #buttons {
