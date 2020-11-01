@@ -171,7 +171,7 @@ nav li:nth-child(3) {
     width: fit-content;
     display: inline-block;
     border-radius: 40px;
-    background-color: #379683;
+    background-color: #428056;
     font-size: 22px;
     color: #EDF5E1;
     text-decoration: none;
@@ -179,7 +179,7 @@ nav li:nth-child(3) {
 }
 
 .call-to-action a:hover {
-    background-color: #44b9a2;
+    background-color: #578f69;
 }
 
 /* ---------------- */
@@ -188,13 +188,13 @@ nav li:nth-child(3) {
 
 #cafe-page {
     background-color: #EDF5E1;
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/hero-images/cafe.png");
+    background-image: linear-gradient(rgba(0, 0, 0, .8),  rgba(66, 128, 86, 0.9)), url("images/hero-images/cafe.png");
     min-height: 100vh;
 }
 
 #heritage-page {
     background-color: #EDF5E1;
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9)), url("images/hero-images/floral.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(66, 128, 86, 0.9)), url("images/hero-images/floral.jpg");
     min-height: 100vh;
 }
 
@@ -260,7 +260,7 @@ nav li:nth-child(3) {
     margin: auto;
     border-radius: 40px;
     text-decoration: none;
-    background-color: #379683;
+    background-color: #428056;
     color: #EDF5E1;
     letter-spacing: 1px;
     font-size: 20px;
@@ -299,7 +299,7 @@ figure {
     max-width: 100%;
     height: 300px;
     object-fit: cover; /* crops image */
-    object-position: 50% 40%; /* crop width and height */
+    object-position: 50% 60%; /* crop width and height */
     width: 100%;
     border-radius: 40px;
 }
@@ -331,7 +331,7 @@ figure {
     margin: 0 6px;
     border-radius: 40px;
     text-decoration: none;
-    background-color: #379683;
+    background-color: #428056;
     color: #EDF5E1;
     letter-spacing: 1px;
     font-size: 16px;
@@ -356,7 +356,7 @@ figure {
 
 #about-page {
     background-color: #EDF5E1;
-    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(92, 219, 149, .9));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(66, 128, 86, .9));
     min-height: 100vh;
 }
 
@@ -411,7 +411,7 @@ input[type=submit] {
     width: fit-content;
     padding: 15px 25px;
     border-radius: 40px;
-    background-color: #379683;
+    background-color: #428056;
     color: #EDF5E1;
     letter-spacing: 2px;
     font-size: 15px;
